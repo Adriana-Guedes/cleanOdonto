@@ -76,6 +76,6 @@ A construção do sistema foi viabilizada através da criação dos itens abaixo
 - MAVEN;
 - Spring Boot;
 - H2 Data Base;
-- MOCKTITO;
-- SPRINGDOC PARA A DOCUMENTAÇÃO DOS ENDPONTS;
+- Mockito;
+- SpringDoc.
 
