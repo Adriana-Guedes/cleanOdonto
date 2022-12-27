@@ -5,17 +5,8 @@
 
 Link Documentação da API - localhost:8080/api-clean/swagger-ui/index.html
 Link do banco de dados h2 - http://localhost:8080/api-clean/h2-console
-## Integrantes | Grupo 3
-- Adriana Guedes
-- Giovanna Galvão
-- Larissa Santos
-- Marcelo Pacholak
-- Raquel Janine
-## Docente
->_Guilherme Lima_
-## Mentoria
->_Veronica Braga_
-## Disciplina: Back-end do Curso Certified Tech Developer by Digital House Brasil
+
+
 
 ## Objetivo
 ***Implementar um sistema que permita administrar a reserva/marcação
