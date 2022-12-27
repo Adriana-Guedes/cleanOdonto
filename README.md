@@ -76,5 +76,6 @@ A construção do sistema foi viabilizada através da criação dos itens abaixo
 - MAVEN;
 - Spring Boot;
 - H2 Data Base;
-- Postman (Para validar toda a interação do sistema com o banco de dados, nos auxiliando á observar a administração da clínica, na prática);
+- MOCKTITO;
+- SPRINGDOC PARA A DOCUMENTAÇÃO DOS ENDPONTS;
 
