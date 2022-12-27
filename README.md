@@ -3,8 +3,8 @@
 
 # <g-emoji class="g-emoji" alias="computer" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4bb.png">💻</g-emoji>Checkpoint Integrador - Clínica Odontológica " Clean Odonto"
 
--Link Documentação da API - localhost:8080/api-clean/swagger-ui/index.html
--Link do banco de dados h2 - http://localhost:8080/api-clean/h2-console
+**Link Documentação da API - localhost:8080/api-clean/swagger-ui/index.html**
+**Link do banco de dados h2 - http://localhost:8080/api-clean/h2-console**
 
 
 
