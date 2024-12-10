@@ -3,79 +3,71 @@
 
 # <g-emoji class="g-emoji" alias="computer" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4bb.png">💻</g-emoji>Crud - Clínica Odontológica " Clean Odonto"
 
-**Link Documentação da API - localhost:8080/api-clean/swagger-ui/index.html**
+# Clean Odonto
 
+## Descrição
 
-**Link do banco de dados h2 - http://localhost:8080/api-clean/h2-console**
+Clean Odonto é um sistema de gerenciamento para uma clínica odontológica, permitindo administração de pacientes, dentistas e consultas. Além disso, o sistema conta com autenticação e autorização para gerenciar o acesso aos diferentes recursos com segurança integrada.
 
+## Links Importantes
 
+- **Documentação da API**: [Swagger](http://localhost:8080/api-clean/swagger-ui/index.html)
+- **Banco de Dados H2**: [Console H2](http://localhost:8080/api-clean/h2-console)
 
 ## Objetivo
-***Implementar um sistema que permita administrar a reserva/marcação
-de consultas para uma clínica odontológica*** 
 
->**Administração de dados odontológicos** - Adicionar e modificar os dados
-dos dentistas. Registrar nome, sobrenome e matrícula de cadastroAinda falta inserir "security" na classe de usuario, há apenas um usuario de teste
+Implementar um sistema para administrar a reserva e marcação de consultas em uma clínica odontológica, com as seguintes funcionalidades principais:
 
->**Administração de pacientes** - Registrar, modificar e excluir pacientes. De
-cada um se armazenam: nome, sobrenome, endereço, RG, data de alta
+## Funcionalidades
 
->**Login** - Validar a entrada no sistema por meio de um login com nome de
-usuário e senha. Permitir que qualquer pessoa logada registre uma
-consulta, mas apenas aqueles que têm uma função de administração pode
-gerenciar dentistas e pacientes
+### Administração de Dados Odontológicos
 
->**Registrar consulta** - Deve ser possível permitir que um paciente seja
-atribuído a uma consulta com um dentista em uma determinada data e
-hora
+- Adicionar e modificar os dados dos dentistas.
+- Registrar nome, sobrenome e matrícula de cadastro.
 
-### Requerimentos Técnicos:
+### Administração de Pacientes
 
-A aplicação deve ser desenvolvida em camadas:
-- [X] **Camada de entidade de negócios** - São as classes Java do nosso negócio
-modeladas através do paradigma orientado a objetos.
-- [X] **Camada de acesso a dados (Repositório)** - São as classes que se encarregam
-de acessar o banco de dados.
-- [X] **Camada de dados (banco de dados)** - É o banco de dados do nosso sistema
-modelado através de um modelo entidade-relacionamento. Usaremos a
-base H2 por sua praticidade.
-- [X] **Camada de negócio** - São as classes de serviço que se encarregam de
-desacoplar o acesso aos dados da visão.
-- [X] **Camada de apresentação** - Estas são as telas da web que teremos que
-desenvolver usando o framework Spring Boot MVC com os controladores e
-uma dessas duas opções: HTML+JavaScript ou React para a visualização.
-- [X] **Tratar as exceções e realizar testes unitários** - Registrar qualquer exceção 
-que possa ser gerada e realizando testes unitários para garantir a qualidade dos
-desenvolvimentos.
+- Registrar, modificar e excluir pacientes.
+- Armazenar: nome, sobrenome, endereço, RG, data de alta.
 
-### Aplicação
-Criamos uma API para ser consumida por esse sistema, que, conectada á um banco de dados relacional, armazenará os dados dos pacientes, dentistas e consultas. E que contará com um sistema de login para a autenticação dos usuários.
+### Login
 
-A construção do sistema foi viabilizada através da criação dos itens abaixo:
-- [X] Controllers
-- [X] Repositories
-- [X] Exceptions
-- [X] Entities DTO
-- [X] Services
+- Validar a entrada no sistema com nome de usuário e senha.
+- Permitir que qualquer usuário logado registre consultas.
+- Apenas usuários com função de administração podem gerenciar dentistas e pacientes.
 
-### Indicações de uso
-- Criar um usuário (Lembre-se que apenas usuários ADMIN podem ter acesso a todas as rotas).
-- Atentar-se para não passar o mesmo userName e email para outro usuário. Essa ação não é possível, haja visto que os atributos "userName" e "email" na classe Usuário estão classificados como unicos (Unique = true).
-- Autenticar usuário (Criação do token JWT).
-- Lembre-se que para criar um Paciente torna-se necessário anteriormente criar um Endereço (O mesmo endereço pode ser atribuído a vários pacientes).
-- Atentar-se para não passar o mesmo RG para outro Paciente. Essa ação não é possível, haja visto que o atributo "rg" na classe Paciente está classificada como unica (Unique = true).
-- Atentar-se para não passar o mesma Matrícula para outro Dentista. Essa ação não é possível, haja visto que o atributo "matrículaCadastro" na classe Dentista está classificada como unica (Unique = true).
-- Para criar uma consulta torna-se necessário um Paciente válido e um Destista válido.
+### Registrar Consultas
 
+- Atribuir pacientes a consultas com dentistas em datas e horários definidos.
 
+## Estrutura do Sistema
 
-### Tecnologias:
+O sistema foi desenvolvido em camadas, seguindo os princípios de boas práticas de design:
 
-- Java;
-- JUnit 5;
-- MAVEN;
-- Spring Boot;
-- H2 Data Base;
-- Mockito;
-- SpringDoc.
+1. **Camada de Entidade de Negócios**: Classes Java modeladas segundo o paradigma de orientação a objetos.
+2. **Camada de Acesso a Dados (Repositório)**: Classes para interação com o banco de dados.
+3. **Camada de Dados (Banco de Dados)**: Banco relacional modelado com H2 para praticidade.
+4. **Camada de Negócio**: Classes de serviço para desacoplar a lógica de negócio da camada de acesso aos dados.
+5. **Camada de Apresentação**: Desenvolvida com Spring Boot MVC e frameworks como HTML+JavaScript ou React para a visualização.
+6. **Tratamento de Exceções e Testes Unitários**: Captura de exceções e testes para garantir qualidade e robustez.
+
+## Implementação
+
+O sistema conta com os seguintes componentes principais:
+
+- **Controllers**: Gerenciam as requisições HTTP.
+- **Repositories**: Manipulação de dados no banco.
+- **Exceptions**: Tratamento de erros e exceções.
+- **Entities DTO**: Representações dos dados.
+- **Services**: Lógica de negócio.
+
+## Requerimentos Técnicos
+
+- **Java**
+- **JUnit 5**
+- **Maven**
+- **Spring Boot**
+- **H2 Database**
+- **Mockito**
+- **SpringDoc**
 
