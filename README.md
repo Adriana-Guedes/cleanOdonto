@@ -3,7 +3,6 @@
 
 # <g-emoji class="g-emoji" alias="computer" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4bb.png">💻</g-emoji>Crud - Clínica Odontológica " Clean Odonto"
 
-# Clean Odonto
 
 ## Descrição
 
